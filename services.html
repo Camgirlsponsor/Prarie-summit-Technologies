@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services | Prairie Summit Technologies</title>
 <meta name="description" content="3D printing, general commerce, and tech &amp; crypto tooling from Prairie Summit Technologies in Wichita, KS.">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
 
 <header class="site-header">
   <div class="wrap nav-row">
@@ -26,7 +28,6 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Insights</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -39,19 +40,18 @@
 
 <section class="hero page-hero">
   <div class="wrap">
-    <p class="eyebrow">Services</p>
-    <h1>Three disciplines. One shop.</h1>
+    <div class="badge-pill"><span class="dot"></span> Services</div>
+    <h1>Three disciplines. <span class="grad-text">One shop.</span></h1>
     <p class="lead">Here's what we actually do, broken out plainly — no jargon dressing-up. If your project spans more than one of these, that's normal for us.</p>
   </div>
-  <svg class="hero-horizon" viewBox="0 0 2880 180" preserveAspectRatio="none" aria-hidden="true">
-    <path fill="#0e1a2b" d="M0,120 C160,90 300,150 480,110 C660,70 760,140 960,100 C1140,65 1300,130 1440,95 C1600,90 1740,150 1920,110 C2100,70 2200,140 2400,100 C2580,65 2740,130 2880,95 L2880,180 L0,180 Z"></path>
-  </svg>
 </section>
+
+<div class="wrap"><div class="glow-divider"></div></div>
 
 <section id="printing" class="section-tight">
   <div class="wrap">
     <div class="grid-2">
-      <div>
+      <div class="reveal">
         <p class="eyebrow">01 — 3D Printing</p>
         <h2>From a rough idea to a printed part</h2>
         <p>We design, model, and print — handling one-off prototypes as easily as small production batches. That includes functional prototypes, replacement parts, enclosures, fixtures, and custom one-off pieces for personal or business use.</p>
@@ -63,7 +63,7 @@
           <li>Post-processing: sanding, painting, assembly</li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <div class="icon">◆</div>
         <h3>Good fits for this service</h3>
         <p style="margin-bottom:14px">A part that broke and isn't sold anywhere anymore. A prototype you need in hand before committing to injection molding. A batch of 50 identical brackets. A custom enclosure for electronics you're building.</p>
@@ -73,16 +73,16 @@
   </div>
 </section>
 
-<section id="commerce" class="section-tight bg-cream-dim">
+<section id="commerce" class="section-tight bg-panel">
   <div class="wrap">
     <div class="grid-2">
-      <div class="card" style="order:2">
+      <div class="card reveal" style="order:2">
         <div class="icon">⇄</div>
         <h3>How we work</h3>
         <p style="margin-bottom:14px">We keep an eye on where supply, demand, and pricing don't line up, and act on it — sourcing goods, reselling, and moving inventory where it's needed. It's opportunistic by nature, so the specifics shift.</p>
         <p style="margin-bottom:0">If you're looking for a sourcing or resale partner, reach out and describe what you need — we'll tell you quickly if it's something we can move on.</p>
       </div>
-      <div style="order:1">
+      <div class="reveal" style="order:1">
         <p class="eyebrow">02 — General Commerce</p>
         <h2>Buying, selling, and sourcing goods</h2>
         <p>Alongside our technical work, we operate a general commerce line — buying and selling across a range of product categories, sourcing inventory, and connecting supply with demand. It's less about one product category and more about spotting good opportunities and executing on them reliably.</p>
@@ -100,7 +100,7 @@
 <section id="tech-tools" class="section-tight">
   <div class="wrap">
     <div class="grid-2">
-      <div>
+      <div class="reveal">
         <p class="eyebrow">03 — Tech &amp; Crypto Tools</p>
         <h2>Software &amp; tools for tech-forward workflows</h2>
         <p>This is where our software background comes in. We build practical tools and automation — often related to crypto, mining, or general dev tooling — for our own use and for others who need something similarly hands-on and no-nonsense.</p>
@@ -108,21 +108,21 @@
           <li>Custom scripts &amp; automation tools</li>
           <li>Crypto &amp; mining-adjacent tooling</li>
           <li>Small software builds &amp; internal tools</li>
-          <li>Notes &amp; write-ups on our blog as we build</li>
+          <li>Dashboards &amp; tracking for on-the-ground operations</li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <div class="icon">⌁</div>
-        <h3>Follow along</h3>
-        <p style="margin-bottom:14px">We write up what we're building and learning on our <a href="blog.html" style="color:var(--gold-light);font-weight:700;text-decoration:underline;">Insights</a> page — practical notes, not polished marketing.</p>
-        <p style="margin-bottom:0">Have something specific in mind? Tell us about it on the <a href="contact.html" style="color:var(--gold-light);font-weight:700;text-decoration:underline;">contact page</a>.</p>
+        <h3>Have something specific in mind?</h3>
+        <p style="margin-bottom:14px">If you've got a workflow that needs automating, a tool that doesn't exist yet, or a crypto/mining-adjacent problem to solve, tell us about it.</p>
+        <p style="margin-bottom:0">Reach out on the <a href="contact.html" style="color:var(--blue-light);font-weight:700;text-decoration:underline;">contact page</a> and we'll tell you honestly whether it's something we can help with.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="bg-navy section-tight">
-  <div class="wrap text-center">
+<section class="bg-panel section-tight">
+  <div class="wrap text-center reveal">
     <h2>Not sure which category fits?</h2>
     <p style="max-width:520px;margin:0 auto 20px">Most of our best projects didn't fit neatly into one line to start with. Tell us what you're trying to do and we'll figure out the right approach together.</p>
     <a href="contact.html" class="btn btn-primary">Get in Touch</a>
@@ -148,7 +148,6 @@
         <h4>Explore</h4>
         <ul class="footer-links">
           <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Insights</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -157,17 +156,19 @@
         <h4>Contact</h4>
         <ul class="footer-links">
           <li>Wichita, Kansas</li>
-          <li><a href="mailto:hello@prairiesummittech.com">hello@prairiesummittech.com</a></li>
+          <li><a href="mailto:crp7178@protonmail.com">crp7178@protonmail.com</a></li>
+          <li><a href="tel:+13165550100">(316) 555-0100</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
-      <span>Comingsoon</span>
+      <span>Phone number is a placeholder — update before launch</span>
     </div>
   </div>
 </footer>
 
+<script src="js/background.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

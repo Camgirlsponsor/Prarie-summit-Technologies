@@ -1,32 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7JT1MEMFT8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7JT1MEMFT8');
-</script>
-
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prairie Summit Technologies | Wichita, KS</title>
 <meta name="description" content="Prairie Summit Technologies is a Wichita, Kansas company building across 3D printing, general commerce, and practical software &amp; tech tools.">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JRSWZ8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
 
 <header class="site-header">
   <div class="wrap nav-row">
@@ -53,59 +40,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Wichita, Kansas</p>
-    <h1>Practical technology,<br>built on Kansas ground.</h1>
+    <div class="badge-pill"><span class="dot"></span> Based in Wichita, Kansas</div>
+    <h1>Practical technology,<br><span class="grad-text">built for what's next.</span></h1>
     <p class="lead">Prairie Summit Technologies is a small, multi-line company out of Wichita — we design and print physical parts, move goods through general commerce, and build software &amp; tools for people who work in tech and crypto. Different disciplines, same approach: build it right, ship it useful.</p>
     <div class="hero-actions">
       <a href="services.html" class="btn btn-primary">Explore Our Work</a>
       <a href="contact.html" class="btn btn-ghost">Start a Conversation</a>
     </div>
   </div>
-  <svg class="hero-horizon" viewBox="0 0 2880 180" preserveAspectRatio="none" aria-hidden="true">
-    <path fill="#0e1a2b" d="M0,120 C160,90 300,150 480,110 C660,70 760,140 960,100 C1140,65 1300,130 1440,95 C1600,90 1740,150 1920,110 C2100,70 2200,140 2400,100 C2580,65 2740,130 2880,95 L2880,180 L0,180 Z"></path>
-  </svg>
 </section>
+
+<div class="wrap"><div class="glow-divider"></div></div>
 
 <section class="section-tight">
   <div class="wrap">
-    <div class="section-head center">
+    <div class="section-head center reveal">
       <p class="eyebrow" style="justify-content:center">What We Do</p>
       <h2>Three lines of work, one team</h2>
       <p>We don't fit neatly into one industry — and we're fine with that. Here's the shorthand version of what keeps the lights on.</p>
     </div>
     <div class="grid-3">
-      <div class="card">
+      <div class="card reveal">
         <div class="icon">◆</div>
         <h3>3D Printing</h3>
         <p>Custom parts, prototypes, and small production runs — from a single one-off design to repeatable batches, printed and finished in-house.</p>
         <a href="services.html#printing" class="read-more">See printing services</a>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <div class="icon">⇄</div>
         <h3>General Commerce</h3>
         <p>Sourcing, buying, and selling across a range of goods. If there's a market for it and the numbers make sense, we're probably paying attention.</p>
         <a href="services.html#commerce" class="read-more">See commerce work</a>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <div class="icon">⌁</div>
         <h3>Tech &amp; Crypto Tools</h3>
-        <p>Software, automation, and practical tools for crypto and tech workflows — plus a running blog of notes on what we're building and learning.</p>
-        <a href="blog.html" class="read-more">Read our insights</a>
+        <p>Software, automation, and practical tools built for crypto and tech-forward workflows — for our own use, and for others who need something similarly hands-on.</p>
+        <a href="services.html#tech-tools" class="read-more">See tech &amp; tools</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="bg-navy">
+<section class="bg-panel">
   <div class="wrap">
     <div class="grid-2">
-      <div>
+      <div class="reveal">
         <p class="eyebrow">Why Prairie Summit</p>
         <h2>Small enough to move fast, broad enough to be useful</h2>
         <p>We're a lean, multi-line operation based in Wichita. Instead of specializing narrowly, we've built capability across a few different disciplines — which means we can take on work that a single-focus shop might have to turn away, and cross-pollinate ideas between them along the way.</p>
         <p>Whether you need a printed part, a sourcing partner, or a tool built for a tech or crypto workflow, you're talking to the same small team every time.</p>
       </div>
-      <div class="stats-row" style="margin-top:0">
+      <div class="stats-row reveal" style="margin-top:0">
         <div class="stat"><b>3</b><span>Core business lines</span></div>
         <div class="stat"><b>KS</b><span>Based in Wichita</span></div>
         <div class="stat"><b>1:1</b><span>Direct access to the team</span></div>
@@ -117,9 +103,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section>
   <div class="wrap">
-    <div class="cta-band">
+    <div class="cta-band reveal">
       <h2>Have a project that doesn't fit a box?</h2>
-      <p style="max-width:520px;margin:0 auto 8px;color:rgba(251,247,238,0.75)">That's kind of our specialty. Tell us what you're working on and we'll tell you honestly whether it's something we can help with.</p>
+      <p style="max-width:520px;margin:0 auto 8px">That's kind of our specialty. Tell us what you're working on and we'll tell you honestly whether it's something we can help with.</p>
       <a href="contact.html" class="btn btn-primary">Reach Out</a>
     </div>
   </div>
@@ -144,7 +130,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h4>Explore</h4>
         <ul class="footer-links">
           <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Insights</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -154,15 +139,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="footer-links">
           <li>Wichita, Kansas</li>
           <li><a href="mailto:crp7178@protonmail.com">crp7178@protonmail.com</a></li>
+          <li><a href="tel:+13165550100">(316) 555-0100</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
+      <span>Phone number is a placeholder — update before launch</span>
     </div>
   </div>
 </footer>
 
+<script src="js/background.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

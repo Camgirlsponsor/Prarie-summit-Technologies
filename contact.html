@@ -2,26 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Prairie Summit Technologies</title>
 <meta name="description" content="Get in touch with Prairie Summit Technologies in Wichita, Kansas.">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7JT1MEMFT8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7JT1MEMFT8');
-</script>
-
 <body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
 
 <header class="site-header">
   <div class="wrap nav-row">
@@ -36,7 +28,6 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Insights</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -49,20 +40,19 @@
 
 <section class="hero page-hero">
   <div class="wrap">
-    <p class="eyebrow">Contact</p>
-    <h1>Tell us what you're working on</h1>
+    <div class="badge-pill"><span class="dot"></span> Contact</div>
+    <h1>Tell us <span class="grad-text">what you're working on</span></h1>
     <p class="lead">Printed part, sourcing question, or a tool you need built — whatever it is, this is the fastest way to reach us.</p>
   </div>
-  <svg class="hero-horizon" viewBox="0 0 2880 180" preserveAspectRatio="none" aria-hidden="true">
-    <path fill="#0e1a2b" d="M0,120 C160,90 300,150 480,110 C660,70 760,140 960,100 C1140,65 1300,130 1440,95 C1600,90 1740,150 1920,110 C2100,70 2200,140 2400,100 C2580,65 2740,130 2880,95 L2880,180 L0,180 Z"></path>
-  </svg>
 </section>
+
+<div class="wrap"><div class="glow-divider"></div></div>
 
 <section class="section-tight">
   <div class="wrap">
     <div class="contact-grid">
 
-      <div>
+      <div class="reveal">
         <div class="section-head">
           <p class="eyebrow">Send a Message</p>
           <h2>Get in touch</h2>
@@ -93,11 +83,12 @@
             <textarea id="message" name="message" placeholder="Tell us a bit about what you need..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="justify-self:start">Send Message</button>
-          <p class="form-status" style="display:none;background:var(--cream-dim);border-radius:10px;padding:14px 16px;font-size:0.9rem;color:var(--ink-soft)"></p>
-
+          <p class="form-status" style="display:none"></p>
+          <p class="form-note">Note: this is a static site with no backend yet, so submissions don't go anywhere. Connect a service like <a href="https://formspree.io" style="text-decoration:underline;color:var(--blue-light)">Formspree</a> or Netlify Forms, or just email us directly for now.</p>
+        </form>
       </div>
 
-      <div>
+      <div class="reveal">
         <div class="contact-info-card">
           <h3>Reach us directly</h3>
           <div class="contact-line">
@@ -109,10 +100,15 @@
             <span class="v"><a href="mailto:crp7178@protonmail.com">crp7178@protonmail.com</a></span>
           </div>
           <div class="contact-line">
+            <span class="k">Phone</span>
+            <span class="v"><a href="tel:+13165550100">(316) 555-0100</a></span>
+          </div>
+          <div class="contact-line">
             <span class="k">Hours</span>
             <span class="v">Mon–Fri, by appointment</span>
           </div>
         </div>
+        <p style="margin-top:18px;font-size:0.85rem;color:var(--ink-faint)">Phone number above is a placeholder — swap it for your real number before this goes live.</p>
       </div>
 
     </div>
@@ -138,7 +134,6 @@
         <h4>Explore</h4>
         <ul class="footer-links">
           <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Insights</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -148,15 +143,18 @@
         <ul class="footer-links">
           <li>Wichita, Kansas</li>
           <li><a href="mailto:crp7178@protonmail.com">crp7178@protonmail.com</a></li>
+          <li><a href="tel:+13165550100">(316) 555-0100</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
+      <span>Phone number is a placeholder — update before launch</span>
     </div>
   </div>
 </footer>
 
+<script src="js/background.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
