@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add("js");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Prairie Summit Technologies</title>
+<meta name="description" content="3D printing, general commerce, and tech &amp; crypto tooling from Prairie Summit Technologies in Wichita, KS.">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+      <span>Prairie Summit<span class="sub">Technologies · Wichita, KS</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-mobile-cta">
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero page-hero">
+  <div class="wrap">
+    <div class="badge-pill"><span class="dot"></span> Services</div>
+    <h1>Three disciplines. <span class="grad-text">One shop.</span></h1>
+    <p class="lead">Here's what we actually do, broken out plainly — no jargon dressing-up. If your project spans more than one of these, that's normal for us.</p>
+  </div>
+</section>
+
+<div class="wrap"><div class="glow-divider"></div></div>
+
+<section id="printing" class="section-tight">
+  <div class="wrap">
+    <div class="grid-2">
+      <div class="reveal">
+        <div class="service-num">01</div>
+        <p class="eyebrow">3D Printing</p>
+        <h2>From a rough idea to a printed part</h2>
+        <p>We design, model, and print — handling one-off prototypes as easily as small production batches. That includes functional prototypes, replacement parts, enclosures, fixtures, and custom one-off pieces for personal or business use.</p>
+        <ul class="pill-list">
+          <li>3D modeling &amp; design-for-print consultation</li>
+          <li>FDM printing in a range of engineering &amp; consumer filaments</li>
+          <li>Prototyping, iteration, and functional testing</li>
+          <li>Small-batch production runs</li>
+          <li>Post-processing: sanding, painting, assembly</li>
+        </ul>
+      </div>
+      <div class="card reveal d2">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
+        </div>
+        <h3>Good fits for this service</h3>
+        <p style="margin-bottom:14px">A part that broke and isn't sold anywhere anymore. A prototype you need in hand before committing to injection molding. A batch of 50 identical brackets. A custom enclosure for electronics you're building.</p>
+        <p style="margin-bottom:0">Send us a sketch, a reference part, or an existing STL and we'll tell you honestly what it'll take.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="commerce" class="section-tight bg-panel">
+  <div class="wrap">
+    <div class="grid-2">
+      <div class="card reveal" style="order:2">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 7h13l-3-3M20 7l-3 3M17 17H4l3 3M4 17l3-3"/></svg>
+        </div>
+        <h3>How we work</h3>
+        <p style="margin-bottom:14px">We keep an eye on where supply, demand, and pricing don't line up, and act on it — sourcing goods, reselling, and moving inventory where it's needed. It's opportunistic by nature, so the specifics shift.</p>
+        <p style="margin-bottom:0">If you're looking for a sourcing or resale partner, reach out and describe what you need — we'll tell you quickly if it's something we can move on.</p>
+      </div>
+      <div class="reveal" style="order:1">
+        <div class="service-num">02</div>
+        <p class="eyebrow">General Commerce</p>
+        <h2>Buying, selling, and sourcing goods</h2>
+        <p>Alongside our technical work, we operate a general commerce line — buying and selling across a range of product categories, sourcing inventory, and connecting supply with demand. It's less about one product category and more about spotting good opportunities and executing on them reliably.</p>
+        <ul class="pill-list">
+          <li>Sourcing &amp; procurement</li>
+          <li>Resale &amp; inventory turnover</li>
+          <li>Deal &amp; opportunity evaluation</li>
+          <li>Logistics coordination</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tech-tools" class="section-tight">
+  <div class="wrap">
+    <div class="grid-2">
+      <div class="reveal">
+        <div class="service-num">03</div>
+        <p class="eyebrow">Tech &amp; Crypto Tools</p>
+        <h2>Software &amp; tools for tech-forward workflows</h2>
+        <p>This is where our software background comes in. We build practical tools and automation — often related to crypto, mining, or general dev tooling — for our own use and for others who need something similarly hands-on and no-nonsense.</p>
+        <ul class="pill-list">
+          <li>Custom scripts &amp; automation tools</li>
+          <li>Crypto &amp; mining-adjacent tooling</li>
+          <li>Small software builds &amp; internal tools</li>
+          <li>Dashboards &amp; tracking for on-the-ground operations</li>
+        </ul>
+      </div>
+      <div class="card reveal d2">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+        </div>
+        <h3>Have something specific in mind?</h3>
+        <p style="margin-bottom:14px">If you've got a workflow that needs automating, a tool that doesn't exist yet, or a crypto/mining-adjacent problem to solve, tell us about it.</p>
+        <p style="margin-bottom:0">Reach out on the <a href="contact.html" style="color:var(--blue-light);font-weight:700;text-decoration:underline;">contact page</a> and we'll tell you honestly whether it's something we can help with.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-panel section-tight">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center">Common questions</p>
+      <h2>Before you write</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button type="button" aria-expanded="false">Do I have to be in Wichita?</button>
+        <p class="faq-a">No. Printing and physical goods are easier nearby, but software, tooling, and a lot of commerce work can happen remotely. Tell us where you are and we'll say if logistics matter.</p>
+      </div>
+      <div class="faq-item">
+        <button type="button" aria-expanded="false">Can a project span more than one line?</button>
+        <p class="faq-a">Yes — that's common. An enclosure plus a small tool, or sourcing plus a tracking script. You still talk to the same team.</p>
+      </div>
+      <div class="faq-item">
+        <button type="button" aria-expanded="false">How do I get a quote?</button>
+        <p class="faq-a">Send a sketch, STL, product list, or a short note about the workflow. We'll reply with whether we can help and what it would take — not a canned package.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap text-center reveal">
+    <h2>Not sure which category fits?</h2>
+    <p style="max-width:520px;margin:0 auto 20px">Most of our best projects didn't fit neatly into one line to start with. Tell us what you're trying to do and we'll figure out the right approach together.</p>
+    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+          <span>Prairie Summit Technologies</span>
+        </div>
+        <p>A Wichita, Kansas company working across 3D printing, general commerce, and practical software &amp; tech tools.</p>
+        <div class="social-row">
+          <a href="#" aria-label="X / Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li>Wichita, Kansas</li>
+          <li><a href="mailto:crp7178@protonmail.com">crp7178@protonmail.com</a></li>
+          <li><a href="tel:+13165550100">(316) 555-0100</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
+      <span>Phone number is a placeholder — update before launch</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/background.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

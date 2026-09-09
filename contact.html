@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add("js");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Prairie Summit Technologies</title>
+<meta name="description" content="Get in touch with Prairie Summit Technologies in Wichita, Kansas.">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+      <span>Prairie Summit<span class="sub">Technologies · Wichita, KS</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-mobile-cta">
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero page-hero">
+  <div class="wrap">
+    <div class="badge-pill"><span class="dot"></span> Contact</div>
+    <h1>Tell us <span class="grad-text">what you're working on</span></h1>
+    <p class="lead">Printed part, sourcing question, or a tool you need built — whatever it is, this is the fastest way to reach us.</p>
+  </div>
+</section>
+
+<div class="wrap"><div class="glow-divider"></div></div>
+
+<section class="section-tight">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <div class="reveal">
+        <div class="section-head">
+          <p class="eyebrow">Send a Message</p>
+          <h2>Get in touch</h2>
+          <p>Fill this out and we'll get back to you. This form doesn't send anywhere yet — see the note below.</p>
+        </div>
+        <form class="contact-form">
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" autocomplete="name" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required>
+            </div>
+          </div>
+          <div>
+            <label for="topic">What's this about?</label>
+            <select id="topic" name="topic">
+              <option>3D Printing</option>
+              <option>General Commerce</option>
+              <option>Tech / Crypto Tools</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about what you need..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="justify-self:start">Send Message</button>
+          <p class="form-status" style="display:none" role="status"></p>
+          <p class="form-note">Note: this is a static site with no backend yet, so submissions don't go anywhere. Connect a service like <a href="https://formspree.io" style="text-decoration:underline;color:var(--blue-light)">Formspree</a> or Netlify Forms, or just email us directly for now.</p>
+        </form>
+      </div>
+
+      <div class="reveal d2">
+        <div class="contact-info-card">
+          <h3>Reach us directly</h3>
+          <div class="contact-line">
+            <span class="k">Location</span>
+            <span class="v">Wichita, Kansas</span>
+          </div>
+          <div class="contact-line">
+            <span class="k">Email</span>
+            <span class="v"><a href="mailto:crp7178@protonmail.com">crp7178@protonmail.com</a></span>
+          </div>
+          <div class="contact-line">
+            <span class="k">Phone</span>
+            <span class="v"><a href="tel:+13165550100">(316) 555-0100</a></span>
+          </div>
+          <div class="contact-line">
+            <span class="k">Hours</span>
+            <span class="v">Mon–Fri, by appointment</span>
+          </div>
+        </div>
+        <p style="margin-top:18px;font-size:0.85rem;color:var(--ink-faint)">Phone number above is a placeholder — swap it for your real number before this goes live.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+          <span>Prairie Summit Technologies</span>
+        </div>
+        <p>A Wichita, Kansas company working across 3D printing, general commerce, and practical software &amp; tech tools.</p>
+        <div class="social-row">
+          <a href="#" aria-label="X / Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li>Wichita, Kansas</li>
+          <li><a href="mailto:crp7178@protonmail.com">crp7178@protonmail.com</a></li>
+          <li><a href="tel:+13165550100">(316) 555-0100</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
+      <span>Phone number is a placeholder — update before launch</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/background.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
