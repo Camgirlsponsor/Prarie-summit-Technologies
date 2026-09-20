@@ -4,10 +4,44 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Prairie Summit Technologies</title>
-<meta name="description" content="Get in touch with Prairie Summit Technologies in Wichita, Kansas.">
+<title>Contact Prairie Summit Technologies | Wichita, KS</title>
+<meta name="description" content="Email Prairie Summit Technologies in Wichita, Kansas about 3D printing, sourcing, or a custom tech tool. We reply directly — no ticket queue.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Prairie Summit Technologies">
+<meta name="geo.region" content="US-KS">
+<meta name="geo.placename" content="Wichita">
 <meta name="theme-color" content="#05070d">
+<link rel="canonical" href="https://prairiesummittech.net/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prairie Summit Technologies">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://prairiesummittech.net/contact.html">
+<meta property="og:title" content="Contact | Prairie Summit Technologies">
+<meta property="og:description" content="Tell us what you're working on — 3D printing, sourcing, or a tool you need built.">
+<meta property="og:image" content="https://prairiesummittech.net/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Prairie Summit Technologies — practical technology from Wichita, Kansas">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact | Prairie Summit Technologies">
+<meta name="twitter:description" content="Tell us what you're working on — 3D printing, sourcing, or a tool you need built.">
+<meta name="twitter:image" content="https://prairiesummittech.net/assets/og-image.png">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://prairiesummittech.net/contact.html#webpage",
+  "url": "https://prairiesummittech.net/contact.html",
+  "name": "Contact Prairie Summit Technologies | Wichita, KS",
+  "description": "Email Prairie Summit Technologies in Wichita, Kansas about 3D printing, sourcing, or a custom tech tool.",
+  "isPartOf": { "@id": "https://prairiesummittech.net/#website" },
+  "mainEntity": { "@id": "https://prairiesummittech.net/#business" }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,13 +55,13 @@
 <header class="site-header">
   <div class="wrap nav-row">
     <a href="index.html" class="brand">
-      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo" width="36" height="36">
       <span>Prairie Summit<span class="sub">Technologies · Wichita, KS</span></span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="site-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -63,9 +97,9 @@
         <div class="section-head">
           <p class="eyebrow">Send a Message</p>
           <h2>Get in touch</h2>
-          <p>Fill this out and we'll get back to you. This form doesn't send anywhere yet — see the note below.</p>
+          <p>Fill this out and we’ll open your email app with the message ready to send. You can also email us directly.</p>
         </div>
-        <form class="contact-form">
+        <form class="contact-form" action="mailto:prairiesummittech@outlook.com" method="post" enctype="text/plain">
           <div class="form-row">
             <div>
               <label for="name">Name</label>
@@ -89,9 +123,9 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Tell us a bit about what you need..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="justify-self:start">Send Message</button>
-          <p class="form-status" style="display:none" role="status"></p>
-          <p class="form-note">Note: this is a static site with no backend yet, so submissions don't go anywhere. Connect a service like <a href="https://formspree.io" style="text-decoration:underline;color:var(--blue-light)">Formspree</a> or Netlify Forms, or just email us directly for now.</p>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" hidden role="status"></p>
+          <p class="form-note">Prefer to skip the form? Email <a href="mailto:prairiesummittech@outlook.com">prairiesummittech@outlook.com</a>.</p>
         </form>
       </div>
 
@@ -107,15 +141,11 @@
             <span class="v"><a href="mailto:prairiesummittech@outlook.com">prairiesummittech@outlook.com</a></span>
           </div>
           <div class="contact-line">
-            <span class="k">Phone</span>
-            <span class="v"><a href="tel:+13165550100">(316) 555-0100</a></span>
-          </div>
-          <div class="contact-line">
             <span class="k">Hours</span>
             <span class="v">Mon–Fri, by appointment</span>
           </div>
         </div>
-        <p style="margin-top:18px;font-size:0.85rem;color:var(--ink-faint)">Phone number above is a placeholder — swap it for your real number before this goes live.</p>
+        <p class="contact-aside">Printing and physical goods are easiest nearby. Software, tooling, and a lot of commerce work can happen remotely.</p>
       </div>
 
     </div>
@@ -128,15 +158,10 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+          <img src="assets/logo.svg" alt="" width="28" height="28">
           <span>Prairie Summit Technologies</span>
         </div>
         <p>A Wichita, Kansas company working across 3D printing, general commerce, and practical software &amp; tech tools.</p>
-        <div class="social-row">
-          <a href="#" aria-label="X / Twitter">𝕏</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="GitHub">GH</a>
-        </div>
       </div>
       <div>
         <h4>Explore</h4>
@@ -151,13 +176,12 @@
         <ul class="footer-links">
           <li>Wichita, Kansas</li>
           <li><a href="mailto:prairiesummittech@outlook.com">prairiesummittech@outlook.com</a></li>
-          <li><a href="tel:+13165550100">(316) 555-0100</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
-      <span>Phone number is a placeholder — update before launch</span>
+      <span>Wichita, Kansas</span>
     </div>
   </div>
 </footer>

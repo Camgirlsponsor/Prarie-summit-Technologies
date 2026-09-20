@@ -4,10 +4,44 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Prairie Summit Technologies</title>
-<meta name="description" content="About Prairie Summit Technologies, a multi-line company based in Wichita, Kansas.">
+<title>About Prairie Summit Technologies | Wichita, Kansas</title>
+<meta name="description" content="Prairie Summit Technologies is a small Wichita, Kansas company built around 3D printing, general commerce, and hands-on tech tooling — one team, three lines of work.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Prairie Summit Technologies">
+<meta name="geo.region" content="US-KS">
+<meta name="geo.placename" content="Wichita">
 <meta name="theme-color" content="#05070d">
+<link rel="canonical" href="https://prairiesummittech.net/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prairie Summit Technologies">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://prairiesummittech.net/about.html">
+<meta property="og:title" content="About | Prairie Summit Technologies">
+<meta property="og:description" content="A small Kansas company that does a few things well — 3D printing, commerce, and tech tools from Wichita.">
+<meta property="og:image" content="https://prairiesummittech.net/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Prairie Summit Technologies — practical technology from Wichita, Kansas">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About | Prairie Summit Technologies">
+<meta name="twitter:description" content="A small Kansas company that does a few things well — 3D printing, commerce, and tech tools from Wichita.">
+<meta name="twitter:image" content="https://prairiesummittech.net/assets/og-image.png">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://prairiesummittech.net/about.html#webpage",
+  "url": "https://prairiesummittech.net/about.html",
+  "name": "About Prairie Summit Technologies | Wichita, Kansas",
+  "description": "Prairie Summit Technologies is a small Wichita, Kansas company built around 3D printing, general commerce, and hands-on tech tooling.",
+  "isPartOf": { "@id": "https://prairiesummittech.net/#website" },
+  "about": { "@id": "https://prairiesummittech.net/#business" }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,13 +55,13 @@
 <header class="site-header">
   <div class="wrap nav-row">
     <a href="index.html" class="brand">
-      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo" width="36" height="36">
       <span>Prairie Summit<span class="sub">Technologies · Wichita, KS</span></span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="site-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -65,7 +99,7 @@
         <p>Instead of picking a single lane, we operate across three: 3D printing and fabrication, general commerce, and technology &amp; tooling for crypto-adjacent and technical workflows. Each line stands on its own, but they share the same people, the same standards, and the same willingness to figure things out from first principles.</p>
         <p>We're not a big company pretending to be small, or a small company pretending to be big. We're a Kansas operation that takes on real work across a few different areas, and tries to do each of them properly.</p>
       </div>
-      <div class="value-grid reveal d2" style="grid-template-columns:1fr;gap:18px">
+      <div class="value-grid reveal d2 stacked-values">
         <div class="card">
           <h3>Grounded</h3>
           <p style="margin-bottom:0">Wichita is home base, not just a mailing address. We build things that hold up.</p>
@@ -156,15 +190,10 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+          <img src="assets/logo.svg" alt="" width="28" height="28">
           <span>Prairie Summit Technologies</span>
         </div>
         <p>A Wichita, Kansas company working across 3D printing, general commerce, and practical software &amp; tech tools.</p>
-        <div class="social-row">
-          <a href="#" aria-label="X / Twitter">𝕏</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="GitHub">GH</a>
-        </div>
       </div>
       <div>
         <h4>Explore</h4>
@@ -179,13 +208,12 @@
         <ul class="footer-links">
           <li>Wichita, Kansas</li>
           <li><a href="mailto:prairiesummittech@outlook.com">prairiesummittech@outlook.com</a></li>
-          <li><a href="tel:+13165550100">(316) 555-0100</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
-      <span>Phone number is a placeholder — update before launch</span>
+      <span>Wichita, Kansas</span>
     </div>
   </div>
 </footer>

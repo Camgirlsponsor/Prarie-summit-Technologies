@@ -4,13 +4,74 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prairie Summit Technologies | Wichita, KS</title>
-<meta name="description" content="Prairie Summit Technologies is a Wichita, Kansas company building across 3D printing, general commerce, and practical software &amp; tech tools.">
+<title>Prairie Summit Technologies | 3D Printing &amp; Tech Tools in Wichita, KS</title>
+<meta name="description" content="Prairie Summit Technologies is a Wichita, Kansas company for 3D printing, general commerce, and practical software and crypto tooling. Local craft, remote-ready work.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Prairie Summit Technologies">
+<meta name="geo.region" content="US-KS">
+<meta name="geo.placename" content="Wichita">
 <meta name="theme-color" content="#05070d">
-<meta property="og:title" content="Prairie Summit Technologies">
-<meta property="og:description" content="Practical technology, built for what's next — 3D printing, commerce, and tech tools from Wichita, Kansas.">
+<link rel="canonical" href="https://prairiesummittech.net/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Prairie Summit Technologies">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://prairiesummittech.net/">
+<meta property="og:title" content="Prairie Summit Technologies | Wichita, KS">
+<meta property="og:description" content="Practical technology, built for what's next — 3D printing, commerce, and tech tools from Wichita, Kansas.">
+<meta property="og:image" content="https://prairiesummittech.net/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Prairie Summit Technologies — practical technology from Wichita, Kansas">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prairie Summit Technologies | Wichita, KS">
+<meta name="twitter:description" content="3D printing, general commerce, and tech tools from Wichita, Kansas.">
+<meta name="twitter:image" content="https://prairiesummittech.net/assets/og-image.png">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://prairiesummittech.net/#business",
+      "name": "Prairie Summit Technologies",
+      "url": "https://prairiesummittech.net/",
+      "email": "prairiesummittech@outlook.com",
+      "image": "https://prairiesummittech.net/assets/og-image.png",
+      "logo": "https://prairiesummittech.net/assets/apple-touch-icon.png",
+      "description": "A Wichita, Kansas company working across 3D printing, general commerce, and practical software and tech tools.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wichita",
+        "addressRegion": "KS",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Wichita", "Kansas", "United States"],
+      "priceRange": "$$",
+      "knowsAbout": ["3D printing", "prototyping", "general commerce", "software tooling", "crypto tooling"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://prairiesummittech.net/#website",
+      "url": "https://prairiesummittech.net/",
+      "name": "Prairie Summit Technologies",
+      "publisher": { "@id": "https://prairiesummittech.net/#business" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://prairiesummittech.net/#webpage",
+      "url": "https://prairiesummittech.net/",
+      "name": "Prairie Summit Technologies | 3D Printing & Tech Tools in Wichita, KS",
+      "isPartOf": { "@id": "https://prairiesummittech.net/#website" },
+      "about": { "@id": "https://prairiesummittech.net/#business" }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,13 +85,13 @@
 <header class="site-header">
   <div class="wrap nav-row">
     <a href="index.html" class="brand">
-      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo" width="36" height="36">
       <span>Prairie Summit<span class="sub">Technologies · Wichita, KS</span></span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="site-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -186,15 +247,10 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+          <img src="assets/logo.svg" alt="" width="28" height="28">
           <span>Prairie Summit Technologies</span>
         </div>
         <p>A Wichita, Kansas company working across 3D printing, general commerce, and practical software &amp; tech tools.</p>
-        <div class="social-row">
-          <a href="#" aria-label="X / Twitter">𝕏</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="GitHub">GH</a>
-        </div>
       </div>
       <div>
         <h4>Explore</h4>
@@ -209,13 +265,12 @@
         <ul class="footer-links">
           <li>Wichita, Kansas</li>
           <li><a href="mailto:prairiesummittech@outlook.com">prairiesummittech@outlook.com</a></li>
-          <li><a href="tel:+13165550100">(316) 555-0100</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
-      <span>Phone number is a placeholder — update before launch</span>
+      <span>Wichita, Kansas</span>
     </div>
   </div>
 </footer>

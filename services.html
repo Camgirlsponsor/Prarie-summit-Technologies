@@ -4,10 +4,76 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Prairie Summit Technologies</title>
-<meta name="description" content="3D printing, general commerce, and tech &amp; crypto tooling from Prairie Summit Technologies in Wichita, KS.">
+<title>3D Printing, Commerce &amp; Tech Tools | Prairie Summit Technologies</title>
+<meta name="description" content="3D printing and prototyping, general commerce and sourcing, plus custom tech and crypto tools from Prairie Summit Technologies in Wichita, Kansas.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Prairie Summit Technologies">
+<meta name="geo.region" content="US-KS">
+<meta name="geo.placename" content="Wichita">
 <meta name="theme-color" content="#05070d">
+<link rel="canonical" href="https://prairiesummittech.net/services.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prairie Summit Technologies">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://prairiesummittech.net/services.html">
+<meta property="og:title" content="Services | Prairie Summit Technologies">
+<meta property="og:description" content="3D printing, general commerce, and tech &amp; crypto tooling from Prairie Summit Technologies in Wichita, KS.">
+<meta property="og:image" content="https://prairiesummittech.net/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Prairie Summit Technologies — practical technology from Wichita, Kansas">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Services | Prairie Summit Technologies">
+<meta name="twitter:description" content="3D printing, general commerce, and tech &amp; crypto tooling from Wichita, KS.">
+<meta name="twitter:image" content="https://prairiesummittech.net/assets/og-image.png">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://prairiesummittech.net/services.html#webpage",
+      "url": "https://prairiesummittech.net/services.html",
+      "name": "3D Printing, Commerce & Tech Tools | Prairie Summit Technologies",
+      "description": "3D printing and prototyping, general commerce and sourcing, plus custom tech and crypto tools from Prairie Summit Technologies in Wichita, Kansas.",
+      "isPartOf": { "@id": "https://prairiesummittech.net/#website" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I have to be in Wichita?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Printing and physical goods are easier nearby, but software, tooling, and a lot of commerce work can happen remotely. Tell us where you are and we'll say if logistics matter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a project span more than one line?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — that's common. An enclosure plus a small tool, or sourcing plus a tracking script. You still talk to the same team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a quote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send a sketch, STL, product list, or a short note about the workflow. We'll reply with whether we can help and what it would take — not a canned package."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,13 +87,13 @@
 <header class="site-header">
   <div class="wrap nav-row">
     <a href="index.html" class="brand">
-      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo" width="36" height="36">
       <span>Prairie Summit<span class="sub">Technologies · Wichita, KS</span></span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="site-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -131,7 +197,7 @@
         </div>
         <h3>Have something specific in mind?</h3>
         <p style="margin-bottom:14px">If you've got a workflow that needs automating, a tool that doesn't exist yet, or a crypto/mining-adjacent problem to solve, tell us about it.</p>
-        <p style="margin-bottom:0">Reach out on the <a href="contact.html" style="color:var(--blue-light);font-weight:700;text-decoration:underline;">contact page</a> and we'll tell you honestly whether it's something we can help with.</p>
+        <p style="margin-bottom:0">Reach out on the <a href="contact.html" class="inline-link">contact page</a> and we'll tell you honestly whether it's something we can help with.</p>
       </div>
     </div>
   </div>
@@ -145,16 +211,16 @@
     </div>
     <div class="faq reveal">
       <div class="faq-item">
-        <button type="button" aria-expanded="false">Do I have to be in Wichita?</button>
-        <p class="faq-a">No. Printing and physical goods are easier nearby, but software, tooling, and a lot of commerce work can happen remotely. Tell us where you are and we'll say if logistics matter.</p>
+        <button type="button" aria-expanded="false" aria-controls="faq-location" id="faq-location-btn">Do I have to be in Wichita?</button>
+        <p class="faq-a" id="faq-location">No. Printing and physical goods are easier nearby, but software, tooling, and a lot of commerce work can happen remotely. Tell us where you are and we'll say if logistics matter.</p>
       </div>
       <div class="faq-item">
-        <button type="button" aria-expanded="false">Can a project span more than one line?</button>
-        <p class="faq-a">Yes — that's common. An enclosure plus a small tool, or sourcing plus a tracking script. You still talk to the same team.</p>
+        <button type="button" aria-expanded="false" aria-controls="faq-span" id="faq-span-btn">Can a project span more than one line?</button>
+        <p class="faq-a" id="faq-span">Yes — that's common. An enclosure plus a small tool, or sourcing plus a tracking script. You still talk to the same team.</p>
       </div>
       <div class="faq-item">
-        <button type="button" aria-expanded="false">How do I get a quote?</button>
-        <p class="faq-a">Send a sketch, STL, product list, or a short note about the workflow. We'll reply with whether we can help and what it would take — not a canned package.</p>
+        <button type="button" aria-expanded="false" aria-controls="faq-quote" id="faq-quote-btn">How do I get a quote?</button>
+        <p class="faq-a" id="faq-quote">Send a sketch, STL, product list, or a short note about the workflow. We'll reply with whether we can help and what it would take — not a canned package.</p>
       </div>
     </div>
   </div>
@@ -174,15 +240,10 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/logo.svg" alt="Prairie Summit Technologies logo">
+          <img src="assets/logo.svg" alt="" width="28" height="28">
           <span>Prairie Summit Technologies</span>
         </div>
         <p>A Wichita, Kansas company working across 3D printing, general commerce, and practical software &amp; tech tools.</p>
-        <div class="social-row">
-          <a href="#" aria-label="X / Twitter">𝕏</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="GitHub">GH</a>
-        </div>
       </div>
       <div>
         <h4>Explore</h4>
@@ -197,13 +258,12 @@
         <ul class="footer-links">
           <li>Wichita, Kansas</li>
           <li><a href="mailto:prairiesummittech@outlook.com">prairiesummittech@outlook.com</a></li>
-          <li><a href="tel:+13165550100">(316) 555-0100</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
-      <span>Phone number is a placeholder — update before launch</span>
+      <span>Wichita, Kansas</span>
     </div>
   </div>
 </footer>

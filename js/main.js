@@ -17,14 +17,24 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", setScrolled, { passive: true });
 
   if (toggle && nav) {
+    var navHome = nav.parentNode;
+    var navNext = nav.nextSibling;
     function closeNav() {
       nav.classList.remove("open");
+      document.body.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open menu");
       document.body.style.overflow = "";
+      if (nav.parentNode !== navHome) {
+        navHome.insertBefore(nav, navNext);
+      }
     }
     function openNav() {
+      document.body.appendChild(nav);
       nav.classList.add("open");
+      document.body.classList.add("nav-open");
       toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Close menu");
       document.body.style.overflow = "hidden";
     }
     toggle.addEventListener("click", function () {
@@ -40,10 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var path = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".main-nav a").forEach(function (link) {
+  document.querySelectorAll(".main-nav ul a").forEach(function (link) {
     var href = link.getAttribute("href");
     if (href === path || (path === "" && href === "index.html")) {
       link.classList.add("active");
+      link.setAttribute("aria-current", "page");
     }
   });
 
@@ -56,12 +67,27 @@ document.addEventListener("DOMContentLoaded", function () {
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var name = form.querySelector("#name");
+      var name = ((form.querySelector("#name") || {}).value || "").trim();
+      var email = ((form.querySelector("#email") || {}).value || "").trim();
+      var topic = ((form.querySelector("#topic") || {}).value || "").trim();
+      var message = ((form.querySelector("#message") || {}).value || "").trim();
+      var first = name.split(/\s+/)[0] || "";
+      var subject = "Website inquiry: " + (topic || "General");
+      var body =
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Topic: " + topic + "\n\n" +
+        message;
+      window.location.href =
+        "mailto:prairiesummittech@outlook.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
       var status = form.querySelector(".form-status");
       if (status) {
-        status.textContent = "Thanks" + (name && name.value ? ", " + name.value.split(" ")[0] : "") +
-          " — this form isn't wired to a mailbox yet. Please email us directly for now, or connect this form to a service like Formspree.";
-        status.style.display = "block";
+        status.hidden = false;
+        status.classList.add("is-success");
+        status.textContent = "Thanks" + (first ? ", " + first : "") +
+          " — your email app should open with this message ready to send. If it doesn't, email prairiesummittech@outlook.com.";
       }
     });
   }

@@ -17,21 +17,27 @@ A fast, dependency-free static website: four pages of plain HTML, one shared sty
 - Gradient headline text, glowing status-pill badges, and an animated light-sweep divider between the header and page content
 - Scroll-reveal animations — cards and section headers fade/slide in as you scroll (skipped automatically for visitors with `prefers-reduced-motion` set)
 - Fully responsive, with a collapsing mobile nav
-- Four pages: Home, Services, About, Contact
-- A contact form (front-end only — see [Wiring up the contact form](#wiring-up-the-contact-form))
-- Clean, semantic HTML with descriptive `<title>` and `<meta description>` tags per page for SEO
+- Four pages: Home, Services, About, Contact, plus a custom 404
+- A contact form that opens a pre-filled email to `prairiesummittech@outlook.com`
+- Search-ready markup: unique titles and descriptions, canonical URLs, Open Graph/Twitter cards, JSON-LD, `robots.txt`, and `sitemap.xml`
 
 ## Project structure
 
 ```
-index.html       Home
-services.html    Services — 3D printing, general commerce, tech & crypto tools
-about.html       About — company story
-contact.html     Contact — info card + form
-css/style.css    All styles (palette, layout, components, animations)
-js/background.js  Animated canvas particle-network background
-js/main.js       Mobile nav toggle, active-link highlighting, scroll-reveal, contact form handling
-assets/logo.svg  Logo mark (gradient mountain-peak icon)
+index.html              Home
+services.html           Services — 3D printing, general commerce, tech & crypto tools
+about.html              About — company story
+contact.html            Contact — info card + form
+404.html                Custom not-found page (used by GitHub Pages)
+robots.txt              Allow crawling; points crawlers at the sitemap
+sitemap.xml             All public URLs for Google / Bing
+site.webmanifest        Name, theme color, and icons
+css/style.css           All styles (palette, layout, components, animations)
+js/background.js        Animated canvas particle-network background
+js/main.js              Mobile nav toggle, active-link highlighting, scroll-reveal, contact form
+assets/logo.svg         Logo mark (gradient mountain-peak icon)
+assets/og-image.png     1200×630 image for link previews
+assets/apple-touch-icon.png  Home-screen / search icon
 ```
 
 Every page links the same `css/style.css`, `js/background.js`, and `js/main.js`, and all internal links are relative (`services.html`, not `/services.html`), so the site works whether it's hosted at the root of a domain or in a subpath like `/repo-name/`.
@@ -62,22 +68,29 @@ Then visit `http://localhost:8000`.
 
 **Custom domain?** Add a `CNAME` file to the repo root containing just your domain (e.g. `prairiesummit.tech`), then point your domain's DNS at GitHub Pages per [GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
-## Before you launch — things to update
+## Getting listed in search engines
 
-A couple of placeholders need swapping out before this goes live for real:
+The site is already crawlable once these files are live on `prairiesummittech.net`:
 
-- **Phone number** — `(316) 555-0100` is still a placeholder and appears in the footer of every page and on `contact.html`. Find and replace it across all four HTML files. (The email address is already set to the real one.)
-- **Contact form** — see below.
-- **Social links** — the footer icons (`𝕏`, `in`, `GH`) currently link to `#`. Point them at your real profiles, or delete the ones you don't use.
+- `robots.txt` tells crawlers they may index the site and where the sitemap lives
+- `sitemap.xml` lists Home, Services, About, and Contact
+- Each page has a unique title, meta description, canonical URL, Open Graph tags, and JSON-LD
 
-### Wiring up the contact form
+Search engines will not pick the site up automatically just because those files exist. After this version is deployed:
 
-The form on `contact.html` is front-end only right now — submitting it just shows a confirmation message (handled in `js/main.js`), but nothing is actually sent anywhere, since GitHub Pages can't run server-side code. Two easy ways to fix that without standing up your own backend:
+1. Open [Google Search Console](https://search.google.com/search-console) and add `https://prairiesummittech.net` as a URL-prefix property.
+2. Verify the domain (HTML file, DNS TXT, or meta tag — any of the options Google offers).
+3. Under **Sitemaps**, submit `https://prairiesummittech.net/sitemap.xml`.
+4. Use **URL Inspection** on the homepage and click **Request indexing**.
+5. Repeat the sitemap submit at [Bing Webmaster Tools](https://www.bing.com/webmasters) if you want Bing/DuckDuckGo coverage too.
 
-- **[Formspree](https://formspree.io)** — add `action="https://formspree.io/f/your-form-id"` and `method="POST"` to the `<form class="contact-form">` tag in `contact.html`. Free tier covers small sites.
-- **Netlify Forms** — if you host on Netlify instead of (or in addition to) GitHub Pages, add `data-netlify="true"` to the same `<form>` tag and Netlify handles the rest.
+First-time indexing often takes a few days. Local queries like “3D printing Wichita” usually need a handful of real pages plus Search Console verification before they start ranking.
 
-Or simplest of all: remove the form and link the "Get in Touch" buttons straight to `mailto:you@yourdomain.com`.
+Optional later: add a real phone number and social profile URLs to the footer and the JSON-LD block in `index.html` once those exist. Placeholder numbers and empty `#` social links were removed so they would not be indexed.
+
+### Contact form
+
+Submitting the form on `contact.html` opens the visitor’s email app with a message addressed to `prairiesummittech@outlook.com`. If you later want submissions to land in the inbox without opening a mail client, connect [Formspree](https://formspree.io) or Netlify Forms and drop the JavaScript `preventDefault` in `js/main.js`.
 
 ## Customizing the design
 

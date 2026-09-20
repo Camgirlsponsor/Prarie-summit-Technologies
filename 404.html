@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add("js");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found | Prairie Summit Technologies</title>
+<meta name="description" content="That page doesn't exist on Prairie Summit Technologies. Head back home or get in touch.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#05070d">
+<link rel="canonical" href="https://prairiesummittech.net/404.html">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.svg" alt="Prairie Summit Technologies logo" width="36" height="36">
+      <span>Prairie Summit<span class="sub">Technologies · Wichita, KS</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-mobile-cta">
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero page-hero page-404">
+  <div class="wrap text-center">
+    <div class="badge-pill"><span class="dot"></span> 404</div>
+    <h1>This page <span class="grad-text">isn’t on the map.</span></h1>
+    <p class="lead" style="margin-left:auto;margin-right:auto">The link may be old, or the page may have moved. The rest of the site is still here.</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a href="index.html" class="btn btn-primary">Back home</a>
+      <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="" width="28" height="28">
+          <span>Prairie Summit Technologies</span>
+        </div>
+        <p>A Wichita, Kansas company working across 3D printing, general commerce, and practical software &amp; tech tools.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li>Wichita, Kansas</li>
+          <li><a href="mailto:prairiesummittech@outlook.com">prairiesummittech@outlook.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Prairie Summit Technologies. All rights reserved.</span>
+      <span>Wichita, Kansas</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/background.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
