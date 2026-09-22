@@ -21,9 +21,10 @@
   --ink-soft: #98a3ba;
   --ink-faint: #616e88;
 
-  --gradient-brand: linear-gradient(135deg, var(--blue) 0%, var(--amber) 100%);
+  --gradient-brand: linear-gradient(105deg, #5ea2ff 0%, #7eb4ff 34%, #ffc39a 72%, #ff9a4d 100%);
   --gradient-brand-soft: linear-gradient(135deg, rgba(47, 125, 255, 0.16), rgba(255, 138, 61, 0.16));
   --gradient-text: linear-gradient(100deg, #a9c9ff 0%, #ffcf9e 100%);
+  --gradient-btn: linear-gradient(105deg, #5ea3ff 0%, #6eabff 48%, #cbb6c8 76%, #ffb17c 100%);
 
   --shadow: 0 20px 60px -24px rgba(0, 0, 0, 0.7);
   --shadow-glow: 0 0 0 1px rgba(47, 125, 255, 0.18), 0 24px 60px -24px rgba(47, 125, 255, 0.4);
@@ -219,30 +220,86 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px 26px;
+  padding: 13px 24px;
   border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: -0.015em;
   font-family: var(--display);
   border: 1px solid transparent;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+  text-decoration: none;
+  transition: transform .2s ease, filter .2s ease, color .2s ease, border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
 }
+.btn:active { transform: translateY(1px) scale(0.985); }
+
 .btn-primary {
-  background: var(--gradient-brand);
-  color: #06070d;
+  color: #071018;
+  border: 0;
+  background-color: #5ea3ff;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0) 40%),
+    var(--gradient-btn);
+  background-origin: border-box;
+  background-clip: border-box;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 10px 28px -10px rgba(47, 125, 255, 0.6),
+    0 18px 40px -18px rgba(255, 138, 61, 0.38);
+  overflow: hidden;
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow); }
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: -30% -50%;
+  background: linear-gradient(105deg, transparent 36%, rgba(255, 255, 255, 0.5) 50%, transparent 64%);
+  transform: translateX(-70%) skewX(-18deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .55s ease, opacity .3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06) saturate(1.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.58),
+    0 1px 0 rgba(255, 255, 255, 0.08),
+    0 14px 36px -12px rgba(47, 125, 255, 0.62),
+    0 20px 44px -16px rgba(255, 138, 61, 0.5);
+}
+.btn-primary:hover::before {
+  transform: translateX(70%) skewX(-18deg);
+  opacity: 1;
+}
+.btn-primary:focus-visible {
+  outline: 2px solid var(--blue-light);
+  outline-offset: 3px;
+}
+
 .btn-ghost {
-  background: var(--surface);
-  border-color: var(--border);
   color: var(--ink);
-  backdrop-filter: blur(12px);
+  border-color: transparent;
+  background-color: transparent;
+  background-image:
+    linear-gradient(rgba(10, 16, 30, 0.72), rgba(10, 16, 30, 0.72)),
+    linear-gradient(120deg, #7fb2ff 0%, #ffc088 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
 }
-.btn-ghost:hover { border-color: rgba(47, 125, 255, 0.5); color: var(--blue-light); background: var(--surface-hover); }
+.btn-ghost:hover {
+  color: #fff;
+  background-image:
+    linear-gradient(rgba(16, 26, 44, 0.92), rgba(16, 26, 44, 0.92)),
+    linear-gradient(120deg, rgba(126, 178, 255, 0.95), rgba(255, 168, 92, 0.9));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 10px 28px -16px rgba(47, 125, 255, 0.45);
+}
 
 header.site-header {
   position: sticky;
@@ -955,6 +1012,9 @@ html.js .reveal.d4 { transition-delay: .24s; }
   .hero-panel, .hero-chip,
   .badge-pill .dot,
   .marquee-track,
-  .reveal { animation: none !important; transition: none !important; }
+  .reveal,
+  .btn-primary::before { animation: none !important; transition: none !important; }
   html.js .reveal { opacity: 1; transform: none; }
+  .btn-primary::before { transform: none; opacity: 0.25; }
+  .btn:active, .btn-primary:hover { transform: none; }
 }
