@@ -784,6 +784,14 @@ section { padding: 96px 0; position: relative; }
   font-family: var(--display);
 }
 
+.work-list {
+  display: grid;
+  gap: 18px;
+  max-width: 720px;
+}
+.work-list .card p { margin-bottom: 0.35em; }
+.work-list .read-more { margin-top: 12px; }
+
 .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 20px; }
 .stacked-values { grid-template-columns: 1fr; gap: 18px; }
 @media (max-width: 880px) { .value-grid { grid-template-columns: 1fr; } }
